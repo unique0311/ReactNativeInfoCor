@@ -1,5 +1,5 @@
 {
-  "name": "MockupProject",
+  "name": "InfoCop",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -26,7 +26,6 @@
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
-    "metro-react-native-babel-preset": "^0.77.0",
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"

@@ -1,4 +1,4 @@
-package com.mockupproject
+package com.infocop
 
 import android.app.Application
 import com.facebook.react.PackageList
