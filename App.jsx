@@ -258,6 +258,14 @@ export default class App extends React.Component {
           }}
           progress={this.state.progress}
         />
+        <StatusBar barStyle="light-content" />
+        {Platform.OS == 'ios' && (
+          <SafeAreaView style={{flex: 0, backgroundColor: 'black'}} />
+        )}
+
+        <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+          <AppContainer />
+        </SafeAreaView>
       </>
     );
   }

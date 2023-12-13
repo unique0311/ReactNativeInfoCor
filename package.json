@@ -15,6 +15,7 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-community/netinfo": "^11.2.0",
     "@react-navigation/native": "^6.1.9",
+    "@react-navigation/stack": "^6.3.20",
     "expo-barcode-scanner": "^12.7.0",
     "moment": "^2.29.4",
     "react": "18.2.0",
