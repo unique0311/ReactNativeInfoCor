@@ -33,7 +33,6 @@ const requestCall = (
   if (body !== null) {
     reqParams.body = JSON.stringify(body);
   }
-  // let fullUrl = isFullUrl ? subUrl : hostURL + subUrl;
 
   console.log(fullUrl);
   console.log('reqParams:', reqParams);
@@ -54,9 +53,7 @@ const requestCall = (
       })
       .then(function (data) {
         console.log(data);
-        // if ( isResponseJson == true ){
         callBack(data, null);
-        // }
       })
       .catch(function (err) {
         console.log('err', err);
@@ -121,8 +118,6 @@ export default class API_Manager {
   static CheckUserIDurl = 'login?STP=User&UID=';
 
   getAPIKey = async (urlToRead, un, pw, ver, del) => {
-    //Task<ServiceResponse>
-
     let headers = {
       icun: un,
       icpw: pw,
@@ -338,8 +333,6 @@ export default class API_Manager {
   };
 
   MakeRequestPlate = async (urlToRead, apikey, stuff) => {
-    // string urlToRead, string apikey, string[] stuff
-
     console.log(
       ' LINE 305 >> MakeRequestPlate >>  urlToRead, apikey, stuff >> : ',
       urlToRead,
@@ -379,9 +372,9 @@ export default class API_Manager {
     console.log('Starting GetUserStatus Process');
 
     let apikey = (await SharedUtility.GetSharedAPIKey()).getAPIKey('NULL');
-    // alert(apikey)
+
     let serverip = SharedUtility.sharedSettingModel.getServerAddr('NULL');
-    // alert(serverip)
+
     let sr = await this.MakePostRequest(
       'https://' + serverip + '/api/prod/icrequest?MID=' + apikey,
       apikey,
@@ -395,9 +388,9 @@ export default class API_Manager {
     console.log('Starting GetUserStatus Process');
 
     let apikey = (await SharedUtility.GetSharedAPIKey()).getAPIKey('NULL');
-    // alert(apikey)
+
     let serverip = SharedUtility.sharedSettingModel.getServerAddr('NULL');
-    // alert(serverip) 37.42199833333335-122.08400000000002
+
     let sr = await this.MakePostRequest(
       'https://' +
         serverip +
@@ -420,9 +413,9 @@ export default class API_Manager {
     console.log('Starting GetUserStatus Process');
 
     let apikey = (await SharedUtility.GetSharedAPIKey()).getAPIKey('NULL');
-    // alert(apikey)
+
     let serverip = SharedUtility.sharedSettingModel.getServerAddr('NULL');
-    // alert(serverip)
+
     let sr = await this.MakePostRequest(
       'https://' + serverip + '/api/prod/icrequest?HAZMAT=' + hazmat,
       apikey,
@@ -436,9 +429,9 @@ export default class API_Manager {
     console.log('Starting GetUserStatus Process');
 
     let apikey = (await SharedUtility.GetSharedAPIKey()).getAPIKey('NULL');
-    // alert(apikey)
+
     let serverip = SharedUtility.sharedSettingModel.getServerAddr('NULL');
-    // alert(serverip)
+
     let sr = await this.MakePostRequest(
       'https://' + serverip + '/api/prod/icrequest?HIST=50',
       apikey,
@@ -452,9 +445,9 @@ export default class API_Manager {
     console.log('Starting GetUserStatus Process');
     let dt = new Date();
     let apikey = (await SharedUtility.GetSharedAPIKey()).getAPIKey('NULL');
-    // alert(apikey)
+
     let serverip = SharedUtility.sharedSettingModel.getServerAddr('NULL');
-    // alert(serverip)
+
     let _url = 'https://' + serverip + '/api/Login/ResetPassword?';
     let pms =
       'EmpID=' +
@@ -481,41 +474,13 @@ export default class API_Manager {
       params.OTP;
 
     let __url = _url + pms;
-    // alert(__url)
-    // let sr =  await this.postMakeRequestResonse (__url, apikey, params);
-
     let sm = SharedUtility.sharedSettingModel;
-
-    // if (sm != null) {
-
     let headers = {
       'api-key': apikey,
       'dmvApi-key': '{b09eafe2-6d5q-4178-a80d-wq841991f631}',
       'Content-Type': 'application/x-www-form-urlencoded',
     };
     console.log(headers);
-    // if (stuff != null && stuff.length >= 2) {
-    //     headers.lat = stuff [0]
-    //     headers.long = stuff [1]
-    // }
-
-    // console.log("request url :" + urlToRead);
-    // console.log("apikey :" + apikey);
-
-    // if (stuff != null) {
-    //     console.log("lat :" + stuff [0]);
-    //     console.log("long :" + stuff [1]);
-    // }
-
-    // return new Promise((resolve, reject)=>{
-
-    // requestCall( __url, 'post', params, headers, (res, err)=>{
-    //     if(err){
-    //         CompletionHandler( err )
-    //     }else{
-    //         CompletionHandler( res )
-    //     }
-    // })
     console.log('----url-----' + apikey);
     console.log(__url);
     fetch(__url, {

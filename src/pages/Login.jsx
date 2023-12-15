@@ -31,7 +31,9 @@ import {
 import SettingsModal from '../modals/SettingsModal';
 import SharedUtility from '../utils/SharedUtility';
 import GlobalUtil from '../utils/GlobalUtil';
+import AAVC from './AAVC';
 import API_Manager from '../utils/API_Manager';
+import PasswordVC from './PasswordVC';
 
 const IconClose = <Icon name="close" size={24} color="white" />;
 const IconCheck = <Icon name="check" size={24} color="white" />;
