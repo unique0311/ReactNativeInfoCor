@@ -33,7 +33,7 @@ class SplashScreen extends React.Component {
             alignItems: 'center',
           }}>
           <Image
-            source={require('../assets/images/iclogo.jpg')}
+            source={require('../assets/images/iclogo.png')}
             style={{
               width: '70%',
               resizeMode: 'contain',

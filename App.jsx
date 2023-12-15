@@ -15,6 +15,7 @@ import RNFS from 'react-native-fs';
 // import RNApkInstallerN from 'react-native-apk-installer-n';
 import AsyncStorage from '@react-native-community/async-storage';
 import DownloadModal from './src/modals/downloadModal';
+import AppContainer from './src/navigation/AppContainer';
 
 export default class App extends React.Component {
   zMsgRef = React.createRef();
