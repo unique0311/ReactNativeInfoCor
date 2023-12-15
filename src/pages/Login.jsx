@@ -14,6 +14,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import HeaderBar, {DotsIcon} from '../components/HeaderBar';
 import Constants from '../utils/Constants';
 
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -27,6 +28,10 @@ import {
   LoginResponse,
   QRCodeDataModel,
 } from '../utils/models';
+import SettingsModal from '../modals/SettingsModal';
+import SharedUtility from '../utils/SharedUtility';
+import GlobalUtil from '../utils/GlobalUtil';
+import API_Manager from '../utils/API_Manager';
 
 const IconClose = <Icon name="close" size={24} color="white" />;
 const IconCheck = <Icon name="check" size={24} color="white" />;
