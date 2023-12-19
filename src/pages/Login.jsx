@@ -1213,6 +1213,51 @@ class Login extends React.Component {
             </View>
           </ImageBackground>
         </KeyboardAvoidingView>
+
+        <DisclaimerModal
+          showDisclaimerModal={this.state.showDisclaimerModal}
+          onTapClose={() => {
+            this.setState({showDisclaimerModal: false});
+          }}
+        />
+
+        <SettingsModal
+          isShow={this.state.isShowSetting}
+          scannedData={this.state.settingData}
+          onTapClose={() => {
+            this.setState({isShowSetting: false});
+          }}
+          onTapImportSettings={() => {
+            this.setState({isShowSetting: false});
+            this.props.navigation.navigate('qr-scan');
+          }}
+        />
+
+        <AAVC
+          isShow={this.state.isShowAAVC}
+          isFromMain={false}
+          aavcAccountModel={this.state.aavcAccountModel}
+          initDataAAVC={this.state.initDataAAVC}
+          LoginCompletionEvent={am => {
+            this.gotoTouchRegisterPageFromAAVC(am);
+          }}
+          OnTapCloseAAVC={() => {
+            this.OnTapCloseAAVC();
+          }}
+        />
+
+        <PasswordVC
+          isShow={this.state.isShowPwdVC}
+          initDataDict={this.state.pVCInitData}
+          OnTapClose={() => {
+            this.setState({
+              isShowPwdVC: false,
+            });
+          }}
+          OnOpenEAVC={dataDict => {
+            // must be added
+          }}
+        />
       </>
     );
   }
