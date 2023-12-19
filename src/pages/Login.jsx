@@ -1258,6 +1258,19 @@ class Login extends React.Component {
             // must be added
           }}
         />
+
+        <ForgotPassword
+          isShow={this.state.isShowFPwdVC}
+          // initDataDict={this.state.pVCInitData}
+          OnTapClose={() => {
+            this.setState({
+              isShowFPwdVC: false,
+            });
+          }}
+          OnOpenEAVC={dataDict => {
+            // must be added
+          }}
+        />
       </>
     );
   }
