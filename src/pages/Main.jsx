@@ -22,6 +22,15 @@ import VersionNumber from 'react-native-version-number';
 import {FlatList} from 'react-native-gesture-handler';
 import DeviceBrightness from '@adrianso/react-native-device-brightness';
 
+import {DotsIcon} from '../components/HeaderBar';
+import SettingsModal from '../modals/SettingsModal';
+import API_Manager from '../utils/API_Manager';
+import MainSegBar from '../components/MainSegBar';
+import SharedUtility from '../utils/SharedUtility';
+import AAVC from './AAVC';
+import {AccountModel, PlateRunResModel} from '../utils/models';
+import Utils from '../utils/Utils';
+
 const IconEdit = <Icon name="edit" size={24} color="white" />;
 const IconCopy = <Icon name="copy1" size={24} color="white" />;
 const IconSetting = <Icon name="setting" size={24} color="white" />;
